@@ -155,7 +155,7 @@ a {
 }
 
 .inicio-container {
-    background-image: -webkit-linear-gradient(top, rgba(228, 228, 228, 0.562), rgba(29, 29, 29, 0.897)), url(./img/agrimensoresInicio.jpg);
+    background-image: -webkit-linear-gradient(top, rgba(228, 228, 228, 0.562), rgba(29, 29, 29, 0.897)), url(./img/inicio.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -273,7 +273,7 @@ a {
 }
 
 #servicio2 {
-    background-image: url(./img/agrimensor2.jpg);
+    background-image: url(./img/servicio2.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -285,7 +285,7 @@ a {
 }
 
 #servicio3 {
-    background-image: url(./img/planos.jpg);
+    background-image: url(./img/servicio3.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -324,7 +324,7 @@ a {
 #owner1 {
     width: 430px;
     height: 300px;
-    background-image: url(./img/prisma.png);
+    background-image: url(./img/perfilPrisma1.png);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 30px;
@@ -333,7 +333,7 @@ a {
 #owner2 {
     width: 430px;
     height: 300px;
-    background-image: url(./img/prisma.png);
+    background-image: url(./img/perfilPrisma2.png);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 30px;
@@ -375,7 +375,7 @@ a {
 
 
 .contacto-container {
-    background-image: url(./img/contacto.jpg);
+    background-image: -webkit-linear-gradient(top,rgba(39, 39, 39, 0.418), rgba(29, 29, 29, 0.932)),  url(./img/contacto.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -416,7 +416,8 @@ a {
 
 input[type="text"],
 input[type="email"],
-input[type="number"] {
+input[type="number"],
+select {
     width: 80%;
     height: 40px;
     border-radius: 20px;
@@ -424,6 +425,45 @@ input[type="number"] {
     padding-left: 10px;
     outline: none;
 }
+
+select option {
+    color: #545454;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+/* select {
+    background-color: #FDD42E;
+    color: #545454;
+    font-weight: bold;
+} */
+
+
+
+select option:hover {
+    background-color: #FDD42E;
+    color: #545454;
+    font-weight: bold;
+}
+
+select option:focus {
+    background-color: #FDD42E;
+    color: #545454;
+    font-weight: bold;
+} 
+
+select option:active {
+    background-color: #FDD42E;
+    color: #545454;
+    font-weight: bold;
+}
+
+select option:checked {
+    background-color: #FDD42E;
+    color: #545454;
+    font-weight: bold;
+}
+
 
 textarea {
     width: 80%;
