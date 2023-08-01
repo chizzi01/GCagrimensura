@@ -26,27 +26,6 @@ $(window).scroll(function () {
 });
 
 
-// let mybutton = document.getElementById("wppIcon");
-
-// // When the user scrolls down 20px from the top of the document, show the button
-// window.onscroll = function () {
-//   scrollFunction();
-// };
-
-// $("#wppIcon").hide();
-
-// function scrollFunction() {
-//   if (
-//     document.body.scrollTop > 20 ||
-//     document.documentElement.scrollTop > 20
-//   ) {
-//     mybutton.style.display = "block";
-//   }
-//   else {
-//     mybutton.style.display = "none";
-//   }
-// }
-
 let mybutton = document.getElementById("wppIcon");
 mybutton.style.display = "none";
 
@@ -178,33 +157,6 @@ function observer(targetId, classAnimation) {
 observer("owner1", "animacionNosotros");
 observer("owner2", "animacionNosotros");
 observer("textoMaps", "animacionMaps");
-
-// function observer2(targetId, classAnimation) {
-
-//   const texto = document.getElementById(targetId);
-//   const mybutton = document.getElementById('wppIcon'); // Agrega esta línea
-
-//   const callback = (entradas, observer) => { // Cambia "opciones" a "observer" para mayor claridad
-//     entradas.forEach((entrada) => {
-//       if (entrada.isIntersecting) {
-//         mybutton.classList.add(classAnimation);
-//         mybutton.style.display = "none";
-//       } else {
-//         mybutton.classList.remove(classAnimation); // Esto es para remover la clase cuando el elemento no está en la vista
-//       }
-//     });
-//   }
-
-//   const observer = new IntersectionObserver(callback, {
-//     root: null,
-//     rootMargin: "0px 0px 0px 0px",
-//     threshold: 0.2
-//   });
-
-//   observer.observe(texto);
-// }
-
-// observer2("myFooter", "hidde");
 
 
 let breadActive = "";
