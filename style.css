@@ -429,14 +429,12 @@ select {
 select option {
     color: #545454;
     font-weight: bold;
-    border-radius: 30px;
 }
 
-/* select {
-    background-color: #FDD42E;
-    color: #545454;
-    font-weight: bold;
-} */
+select {
+    color: #757575;
+    width: 83%;
+}
 
 
 
@@ -446,23 +444,6 @@ select option:hover {
     font-weight: bold;
 }
 
-select option:focus {
-    background-color: #FDD42E;
-    color: #545454;
-    font-weight: bold;
-} 
-
-select option:active {
-    background-color: #FDD42E;
-    color: #545454;
-    font-weight: bold;
-}
-
-select option:checked {
-    background-color: #FDD42E;
-    color: #545454;
-    font-weight: bold;
-}
 
 
 textarea {
