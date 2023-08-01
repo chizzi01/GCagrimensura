@@ -19,6 +19,25 @@
     border-radius: 30px;
 }
 
+.toggle-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 28px;
+}
+
+.bar {
+    background-color: #FFF;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
 .float {
     position: fixed;
     width: 60px;
@@ -38,11 +57,11 @@
     animation-iteration-count: infinite;
 }
 
-.grey{
+.grey {
     color: #545454;
 }
 
-#wppIcon{
+#wppIcon {
     background-image: url(./img/whatsapp.png);
     background-size: cover;
     background-position: center;
@@ -65,7 +84,7 @@
 
 .active-bread {
     color: #FDD42E;
-  }
+}
 
 .line::after {
     content: '';
@@ -74,11 +93,11 @@
     height: 2px;
     background: #FDD42E;
     transition: width .3s;
-  }
+}
 
-  .line:hover::after {
+.line:hover::after {
     width: 100%;
-  }
+}
 
 
 #logoNavbar {
@@ -115,11 +134,11 @@ a {
     color: #fff;
 }
 
-.contacto-noActive{
+.contacto-noActive {
     background-color: #FDD42E;
 }
 
-.contacto-active{
+.contacto-active {
     background-color: #545454;
 }
 
@@ -196,6 +215,7 @@ a {
     height: 100vh;
     display: flex;
     flex-direction: row;
+    /* flex-flow: row wrap; */
     align-items: center;
     justify-content: space-evenly;
 }
@@ -231,7 +251,9 @@ a {
     animation: easeIn 1s ease-in-out;
 }
 
-#servicio1, #servicio2, #servicio3 {
+#servicio1,
+#servicio2,
+#servicio3 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -278,7 +300,8 @@ a {
     width: 100%;
     height: 100vh;
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
+    flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
 }
@@ -326,7 +349,8 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    flex-direction: row;
+    /* flex-direction: row; */
+    flex-flow: row wrap;
 }
 
 .mapa-container video {
@@ -336,14 +360,14 @@ a {
     border-radius: 30px;
 }
 
-.mapa-container{
+.mapa-container {
     width: 50%;
     height: 80%;
     background-color: #FDD42E;
     border-radius: 30px;
 }
 
-.textMap{
+.textMap {
     width: 40%;
     height: 80%;
     color: #545454;
@@ -363,7 +387,7 @@ a {
     justify-content: space-around;
 }
 
-.contacto-form{
+.contacto-form {
     width: 40%;
     height: 80%;
     background-color: #FDD42E;
@@ -375,7 +399,7 @@ a {
     justify-content: space-evenly;
 }
 
-.contacto-form form{
+.contacto-form form {
     width: 100%;
     height: 100%;
     display: flex;
@@ -384,13 +408,15 @@ a {
     justify-content: space-evenly;
 }
 
-.contacto-form h1{
+.contacto-form h1 {
     font-size: 2rem;
     color: #545454;
     font-weight: bold;
 }
 
-input[type="text"], input[type="email"], input[type="number"]{
+input[type="text"],
+input[type="email"],
+input[type="number"] {
     width: 80%;
     height: 40px;
     border-radius: 20px;
@@ -399,7 +425,7 @@ input[type="text"], input[type="email"], input[type="number"]{
     outline: none;
 }
 
-textarea{
+textarea {
     width: 80%;
     height: 80px;
     border-radius: 20px;
@@ -410,7 +436,7 @@ textarea{
     resize: none;
 }
 
-input[type="submit"]{
+input[type="submit"] {
     width: 80%;
     height: 40px;
     border-radius: 30px;
@@ -422,7 +448,7 @@ input[type="submit"]{
     cursor: pointer;
 }
 
-input[type="submit"]:hover{
+input[type="submit"]:hover {
     background-color: #545454;
     color: #FDD42E;
     font-weight: bold;
@@ -456,7 +482,7 @@ input[type="submit"]:hover{
     /* margin-top: -2%; */
 }
 
-.mizzio-container{
+.mizzio-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -485,7 +511,7 @@ input[type="submit"]:hover{
     font-weight: bold;
 }
 
-.footer-contact{
+.footer-contact {
     color: #fff;
     font-size: 1rem;
     font-weight: bold;
@@ -495,7 +521,7 @@ input[type="submit"]:hover{
     justify-content: space-evenly;
 }
 
-.social-icons{
+.social-icons {
     width: 20%;
     height: 50px;
     display: flex;
@@ -513,7 +539,7 @@ input[type="submit"]:hover{
     margin-top: -40px;
 }
 
-.socialSize{
+.socialSize {
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -522,6 +548,10 @@ input[type="submit"]:hover{
 
 .animacionMaps {
     animation: animacionMaps 1s ease-in-out;
+}
+
+.show {
+    visibility: visible;
 }
 
 @keyframes fade-in {
@@ -605,3 +635,126 @@ input[type="submit"]:hover{
         transform: translateX(0);
     }
 }
+
+@keyframes navAnimation {
+    0% {
+        height: 100px;
+    }
+
+    100% {
+        height: 300px;
+    }
+}
+
+@media (max-width: 800px) {
+    #logoNavbar {
+        position: relative;
+    }
+
+    #navBar{
+        padding-left: 0px;
+    }
+
+    .toggle-button {
+        /* padding-top: 2%; */
+        display: flex;
+        right: 40px;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        margin-top: 100px;
+        width: 100%;
+        margin-left: 0%;
+        color: #FFF;
+    }
+
+    #h1Inicio {
+        font-size: 2rem;
+    }
+
+    #tituloServ3,
+    #tituloServ2,
+    #tituloServ {
+        font-size: 1.5rem;
+    }
+
+    #owner1,
+    #owner2 {
+        width: 350px;
+        height: 250px;
+    }
+
+    #textoMaps {
+        font-size: 1rem;
+    }
+
+    .contacto-form h1 {
+        font-size: 1.5rem;
+    }
+
+    .contacto-form {
+        width: 80%;
+    }
+
+    .navbarHeight {
+        animation: navAnimation .2s ease 0s 1 normal forwards;
+    }
+
+    .navbar-links.active {
+        display: flex;
+        animation: myAnim 1s ease 0s 1 normal forwards;
+        line-height: 40px;
+    }
+
+    #contactoBTN {
+        width: 90%;
+        text-align: center;
+    }
+
+    .ubicaciones-container{
+        justify-content: space-around;
+    }
+
+    .mapa-container {
+        width: 95%;
+        height: 300px;
+    }
+
+    .textMap {
+        width: 90%;
+        height: 200px;
+    }
+
+    .footer-logo {
+        width: 70px;
+        height: 40px;
+    }
+
+    .Mizzio {
+        width: 80px;
+    }
+
+    .social-icons {
+        width: 40%;
+        justify-content: space-evenly;
+    }
+
+    .servicios-container{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    #servicio1, #servicio2, #servicio3{
+        width: 90%;
+        margin: 10px;
+    }
+
+    #backServicios, #backServicios2, #backServicios3{
+        width: 100%;
+        height: 100%;
+    }
+
+}
+

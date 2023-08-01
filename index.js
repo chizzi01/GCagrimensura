@@ -25,25 +25,67 @@ $(window).scroll(function () {
   }
 });
 
-let mybutton = document.getElementById("wppIcon");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-  scrollFunction();
+// let mybutton = document.getElementById("wppIcon");
+
+// // When the user scrolls down 20px from the top of the document, show the button
+// window.onscroll = function () {
+//   scrollFunction();
+// };
+
+// $("#wppIcon").hide();
+
+// function scrollFunction() {
+//   if (
+//     document.body.scrollTop > 20 ||
+//     document.documentElement.scrollTop > 20
+//   ) {
+//     mybutton.style.display = "block";
+//   }
+//   else {
+//     mybutton.style.display = "none";
+//   }
+// }
+
+let mybutton = document.getElementById("wppIcon");
+mybutton.style.display = "none";
+
+function observer2(targetId) {
+  const texto = document.getElementById(targetId);
+
+  const callback = (entradas, observer) => {
+    entradas.forEach((entrada) => {
+      if (entrada.isIntersecting) {
+        mybutton.style.display = "none";
+      } else if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      }
+    });
+  }
+
+  const observer = new IntersectionObserver(callback, {
+    root: null,
+    rootMargin: "0px 0px 0px 0px",
+    threshold: 0.2
+  });
+
+  observer.observe(texto);
+}
+
+observer2("myFooter");
+
+window.onscroll = function() {
+  if (document.body.scrollTop <= 20 && document.documentElement.scrollTop <= 20) {
+    mybutton.style.display = "none";
+  } else {
+    let myFooter = document.getElementById("myFooter");
+    let bounding = myFooter.getBoundingClientRect();
+    if (!(bounding.top <= (window.innerHeight || document.documentElement.clientHeight))) {
+      mybutton.style.display = "block";
+    }
+  }
 };
 
-$("#wppIcon").hide();
-
-function scrollFunction() {
-  if (
-    document.body.scrollTop > 20 ||
-    document.documentElement.scrollTop > 20
-  ) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
 
 let servicio1 = document.getElementById("servicio1");
 let servicio2 = document.getElementById("servicio2");
@@ -135,7 +177,35 @@ function observer(targetId, classAnimation) {
 
 observer("owner1", "animacionNosotros");
 observer("owner2", "animacionNosotros");
-observer("textoMaps" , "animacionMaps");
+observer("textoMaps", "animacionMaps");
+
+// function observer2(targetId, classAnimation) {
+
+//   const texto = document.getElementById(targetId);
+//   const mybutton = document.getElementById('wppIcon'); // Agrega esta línea
+
+//   const callback = (entradas, observer) => { // Cambia "opciones" a "observer" para mayor claridad
+//     entradas.forEach((entrada) => {
+//       if (entrada.isIntersecting) {
+//         mybutton.classList.add(classAnimation);
+//         mybutton.style.display = "none";
+//       } else {
+//         mybutton.classList.remove(classAnimation); // Esto es para remover la clase cuando el elemento no está en la vista
+//       }
+//     });
+//   }
+
+//   const observer = new IntersectionObserver(callback, {
+//     root: null,
+//     rootMargin: "0px 0px 0px 0px",
+//     threshold: 0.2
+//   });
+
+//   observer.observe(texto);
+// }
+
+// observer2("myFooter", "hidde");
+
 
 let breadActive = "";
 
@@ -189,3 +259,31 @@ observer3("nosotros", "nosotrosBTN")
 observer3("servicios", "serviciosBTN")
 observer3("ubicaciones", "ubiBTN")
 observer3("contacto", "contactoBTN")
+
+
+const toggleButton = document.getElementsByClassName('toggle-button')[0];
+const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+const navbar = document.getElementById('navBar');
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active');
+  navbar.classList.toggle('navbarHeight');
+  if ($(window).scrollTop() <= 50) {
+    $('#navBar').addClass('solid');
+    $('#navBar').removeClass('unsolid');
+  }
+  let navBar = document.getElementById("navBar");
+
+  if (navBar.classList.contains("solid")) {
+    inicioBTN.classList.remove("grey");
+    nosotrosBTN.classList.remove("grey");
+    serviciosBTN.classList.remove("grey");
+    ubiBTN.classList.remove("grey");
+  }
+
+});
+
+navbarLinks.addEventListener('click', () => {
+  navbarLinks.classList.remove('active');
+  navbar.classList.remove('navbarHeight');
+});
