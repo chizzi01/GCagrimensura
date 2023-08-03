@@ -605,6 +605,10 @@ input[type="submit"]:hover {
     visibility: visible;
 }
 
+#textoMaps {
+    font-size: 3rem;
+}
+
 @keyframes fade-in {
     to {
         opacity: 1;
@@ -738,7 +742,7 @@ input[type="submit"]:hover {
     }
 
     #textoMaps {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .contacto-form h1 {
