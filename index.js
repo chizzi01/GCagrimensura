@@ -53,7 +53,7 @@ function observer2(targetId) {
 
 observer2("myFooter");
 
-window.onscroll = function() {
+window.onscroll = function () {
   if (document.body.scrollTop <= 20 && document.documentElement.scrollTop <= 20) {
     mybutton.style.display = "none";
   } else {
@@ -95,7 +95,13 @@ servicio1.addEventListener("mouseout", function () {
   textoServicio1.classList.add("byebye");
   servicio1.style.filter = "grayscale(100%)";
   backServicios.classList.add("hidde");
-  tituloServ.style.fontSize = "3rem";
+
+  //si esta en responsive que la vuelva a 1.5rem el titulo
+  if (window.innerWidth <= 768) {
+    tituloServ.style.fontSize = "1.5rem";
+  } else {
+    tituloServ.style.fontSize = "3rem";
+  }
 }
 );
 
@@ -112,7 +118,11 @@ servicio2.addEventListener("mouseout", function () {
   textoServicio2.classList.add("byebye");
   servicio2.style.filter = "grayscale(100%)";
   backServicios2.classList.add("hidde");
-  tituloServ2.style.fontSize = "3rem";
+  if (window.innerWidth <= 768) {
+    tituloServ2.style.fontSize = "1.5rem";
+  } else {
+    tituloServ2.style.fontSize = "3rem";
+  }
 }
 );
 
@@ -129,7 +139,11 @@ servicio3.addEventListener("mouseout", function () {
   textoServicio3.classList.add("byebye");
   servicio3.style.filter = "grayscale(100%)";
   backServicios3.classList.add("hidde");
-  tituloServ3.style.fontSize = "3rem";
+  if (window.innerWidth <= 768) {
+    tituloServ3.style.fontSize = "1.5rem";
+  } else {
+    tituloServ3.style.fontSize = "3rem";
+  }
 }
 );
 
