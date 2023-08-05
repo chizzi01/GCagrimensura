@@ -609,6 +609,11 @@ input[type="submit"]:hover {
     font-size: 3rem;
 }
 
+.yellow {
+    color: #FDD42E;
+    text-shadow: #74610e 1px 1px 10px;
+}
+
 @keyframes fade-in {
     to {
         opacity: 1;
