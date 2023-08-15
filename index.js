@@ -99,8 +99,13 @@ servicio1.addEventListener("mouseout", function () {
   //si esta en responsive que la vuelva a 1.5rem el titulo
   if (window.innerWidth <= 768) {
     tituloServ.style.fontSize = "1.5rem";
-  } else {
+  } 
+  else {
     tituloServ.style.fontSize = "3rem";
+  }
+  
+    if ( window.innerWidth >= 1200){
+    tituloServ.style.fontSize = "2rem";
   }
 }
 );
@@ -120,8 +125,12 @@ servicio2.addEventListener("mouseout", function () {
   backServicios2.classList.add("hidde");
   if (window.innerWidth <= 768) {
     tituloServ2.style.fontSize = "1.5rem";
-  } else {
+  } 
+  else {
     tituloServ2.style.fontSize = "3rem";
+  }
+  if ( window.innerWidth >= 1200){
+    tituloServ2.style.fontSize = "2rem";
   }
 }
 );
@@ -141,8 +150,12 @@ servicio3.addEventListener("mouseout", function () {
   backServicios3.classList.add("hidde");
   if (window.innerWidth <= 768) {
     tituloServ3.style.fontSize = "1.5rem";
-  } else {
+  } 
+  else {
     tituloServ3.style.fontSize = "3rem";
+  }
+  if ( window.innerWidth >= 1200){
+    tituloServ3.style.fontSize = "2rem";
   }
 }
 );

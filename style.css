@@ -839,3 +839,27 @@ input[type="submit"]:hover {
 
 }
 
+
+@media  (min-width: 1200px) {
+#textoMaps{
+    font-size: 2.3rem;
+}
+
+#tituloServ3,
+#tituloServ2,
+#tituloServ {
+    font-size: 2rem;
+}
+}
+
+@media  (min-height: 667px) {
+    #textoMaps{
+        font-size: 1.2rem;
+    }
+
+    #owner1,
+    #owner2 {
+        width: 190px;
+        height: 135px;
+    }
+}
