@@ -611,7 +611,7 @@ input[type="submit"]:hover {
 
 .yellow {
     color: #FDD42E;
-    text-shadow: #74610e 1px 1px 10px;
+    text-shadow: #9f8100 1px 1px 10px;
 }
 
 @keyframes fade-in {
