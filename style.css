@@ -613,8 +613,7 @@ input[type="submit"]:hover {
     color: #FDD42E;
     /* text-shadow: #9f8100 1px 1px 10px; */
     background-color: #FFF;
-    border-radius: 20px;
-    padding: 5px;
+    padding: 3px;
 }
 
 @keyframes fade-in {
