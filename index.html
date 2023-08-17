@@ -123,8 +123,10 @@
                 <video src="./img/mapaVideo.mp4" autoplay muted loop playsinline></video>
             </div>
             <div class="textMap">
-                <h1 id="textoMaps">Nuestro estudio cuenta con oficinas en <span class="yellow"> CABA</span> y <span class="yellow">Mar del Plata</span> . Esto nos permite poder
-                    brindarle nuestros servicios en <span class="yellow">CABA</span>, interior de la <span class="yellow"> Provincia de BsAs y Costa Atlántica</span></h1>
+                <h1 id="textoMaps">Nuestro estudio cuenta con oficinas en <span class="yellow"> CABA</span> y <span
+                        class="yellow">Mar del Plata</span> . Esto nos permite poder
+                    brindarle nuestros servicios en <span class="yellow">CABA</span>, interior de la <span
+                        class="yellow"> Provincia de BsAs y Costa Atlántica</span></h1>
             </div>
         </div>
     </section>
@@ -187,6 +189,9 @@
 
     // });
 
+    const nodemailer = require('nodemailer');
+    const dotenv = require('dotenv').config();
+
     let formProblemas = document.getElementById("formProblemas");
     formProblemas.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -230,7 +235,7 @@
             from: email,
             to: "gc.agrimensura.arg@gmail.com",
             subject: 'Consulta o presupuesto para: ' + servicio,
-            html: '<h3>Nombre: </h3>' + nombre + '<h3>Email: </h3>' + email + '<h3>Telefono: </h3>' + telefono  + '<h3>Mensaje: </h3>' + mensaje
+            html: '<h3>Nombre: </h3>' + nombre + '<h3>Email: </h3>' + email + '<h3>Telefono: </h3>' + telefono + '<h3>Mensaje: </h3>' + mensaje
         };
 
         transporter.sendMail(mailOptions, function (error, info) {

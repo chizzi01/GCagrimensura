@@ -1,3 +1,7 @@
+// const nodemailer = require('nodemailer');
+// const dotenv = require('dotenv').config();
+
+
 let words = document.getElementsByClassName('word');
 for (let i = 0; i < words.length; i++) {
   setTimeout(() => {
