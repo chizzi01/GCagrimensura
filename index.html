@@ -134,7 +134,7 @@
 
             <div class="contacto-form">
                 <h1>¡Escribenos tu consulta!</h1>
-                <form action="enviar.php" method="post">
+                <form id="formProblemas" onsubmit="sendMail()" method="post">
                     <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
                     <input type="email" name="email" id="email" placeholder="Email" required>
                     <input type="number" name="telefono" id="telefono" placeholder="Telefono" required>
@@ -194,22 +194,22 @@
 
     let html2 = document.querySelector(".formularioAlign");
 
-    if (localStorage.getItem("problemaEnviado") == "true") {
-        let enviarProblema = document.getElementById("enviarProblema");
-        enviarProblema.disabled = true;
-        enviarProblema.style.backgroundColor = "grey";
-        enviarProblema.style.cursor = "not-allowed";
-        enviarProblema.value = "Enviado";
-    }
+    // if (localStorage.getItem("problemaEnviado") == "true") {
+    //     let enviarProblema = document.getElementById("enviarProblema");
+    //     enviarProblema.disabled = true;
+    //     enviarProblema.style.backgroundColor = "grey";
+    //     enviarProblema.style.cursor = "not-allowed";
+    //     enviarProblema.value = "Enviado";
+    // }
 
     //cambiar el item de localstorage a false para que se pueda volver a enviar el formulario de problemas despues de 24hs de haberlo enviado por primera vez (para evitar spam)
-    let fechaActual = new Date().getUTCDate();
-    let fechaGuardada = localStorage.getItem("fechaProblemaEnviado");
-    let diferenciaDias = fechaActual - fechaGuardada;
+    // let fechaActual = new Date().getUTCDate();
+    // let fechaGuardada = localStorage.getItem("fechaProblemaEnviado");
+    // let diferenciaDias = fechaActual - fechaGuardada;
 
-    if (diferenciaDias >= 1 || diferenciaDias < 0) {
-        localStorage.setItem("problemaEnviado", "false");
-    }
+    // if (diferenciaDias >= 1 || diferenciaDias < 0) {
+    //     localStorage.setItem("problemaEnviado", "false");
+    // }
 
 
     function sendMail() {
@@ -217,7 +217,7 @@
         let email = document.getElementById("email").value;
         let telefono = document.getElementById("telefono").value;
         let servicio = document.getElementById("servicio").value;
-        let mensaje = document.getElementById("message").value;
+        let mensaje = document.getElementById("mensaje").value;
         var transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
@@ -239,8 +239,8 @@
             } else {
                 console.log('Email sent: ' + info.response);
                 //animacion del boton enviar
-                let problemaEnviado = localStorage.setItem("problemaEnviado", "true");
-                let fechaProblemaEnviado = localStorage.setItem("fechaProblemaEnviado", fechaActual);
+                // let problemaEnviado = localStorage.setItem("problemaEnviado", "true");
+                // let fechaProblemaEnviado = localStorage.setItem("fechaProblemaEnviado", fechaActual);
                 setTimeout(function () {
                     window.location.href = "index.html";
                 }, 3000);

@@ -339,7 +339,7 @@ a {
     border-radius: 30px;
 }
 
-.owners-align {
+.owners-align{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -347,7 +347,7 @@ a {
     color: floralwhite;
 }
 
-.textoOwner {
+.textoOwner{
     width: 430px;
     font-size: 1.5rem;
     margin-top: 1rem;
@@ -357,7 +357,7 @@ a {
     margin-left: 40px;
 }
 
-.listOwner {
+.listOwner{
     width: 90%;
     font-size: 1.5rem;
     margin-top: 3rem;
@@ -365,8 +365,8 @@ a {
     text-align: left;
 }
 
-.listOwner li {
-    list-style: circle;
+.listOwner li{
+    list-style: circle ;
 }
 
 .ubicaciones-container {
@@ -405,7 +405,7 @@ a {
 
 
 .contacto-container {
-    background-image: -webkit-linear-gradient(top, rgba(39, 39, 39, 0.418), rgba(29, 29, 29, 0.932)), url(./img/contacto.jpg);
+    background-image: -webkit-linear-gradient(top,rgba(39, 39, 39, 0.418), rgba(29, 29, 29, 0.932)),  url(./img/contacto.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -713,7 +713,7 @@ input[type="submit"]:hover {
         position: relative;
     }
 
-    #navBar {
+    #navBar{
         padding-left: 0px;
     }
 
@@ -775,7 +775,7 @@ input[type="submit"]:hover {
         text-align: center;
     }
 
-    .ubicaciones-container {
+    .ubicaciones-container{
         justify-content: space-around;
     }
 
@@ -803,35 +803,31 @@ input[type="submit"]:hover {
         justify-content: space-evenly;
     }
 
-    .servicios-container {
+    .servicios-container{
         flex-direction: column;
         justify-content: space-evenly;
     }
 
-    #servicio1,
-    #servicio2,
-    #servicio3 {
+    #servicio1, #servicio2, #servicio3{
         width: 90%;
         margin: 10px;
     }
 
-    #backServicios,
-    #backServicios2,
-    #backServicios3 {
+    #backServicios, #backServicios2, #backServicios3{
         width: 100%;
         height: 100%;
     }
 
-    .textoOwner {
+    .textoOwner{
         width: 80%;
         font-size: 1rem;
         margin: 10px;
         padding-left: 77px;
     }
 
-    .listOwner {
-        font-size: 1rem;
-        margin-top: 10px;
+    .listOwner{
+       font-size: 1rem;
+       margin-top: 10px;
     }
 
 
@@ -839,31 +835,27 @@ input[type="submit"]:hover {
 }
 
 @media (max-width: 380px) {
-    #h1Inicio {
+    #h1Inicio{
         font-size: 2rem;
     }
 
 }
 
 
-@media (min-width: 1200px) {
-    #textoMaps {
-        font-size: 2.3rem;
-    }
+@media  (min-width: 1200px) {
+#textoMaps{
+    font-size: 2.3rem;
 }
 
-@media (max-width: 1200px) {
-
-    #tituloServ3,
-    #tituloServ2,
-    #tituloServ {
-        font-size: 2rem;
-    }
+#tituloServ3,
+#tituloServ2,
+#tituloServ {
+    font-size: 2rem;
+}
 }
 
-
-@media (max-height: 667px) {
-    #textoMaps {
+@media  (max-height: 667px) {
+    #textoMaps{
         font-size: 1.2rem;
     }
 
