@@ -1,5 +1,5 @@
-// const nodemailer = require('nodemailer');
-// const dotenv = require('dotenv').config();
+const nodemailer = require('nodemailer');
+const dotenv = require('dotenv').config();
 
 
 let words = document.getElementsByClassName('word');
