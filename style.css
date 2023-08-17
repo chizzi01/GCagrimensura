@@ -611,7 +611,10 @@ input[type="submit"]:hover {
 
 .yellow {
     color: #FDD42E;
-    text-shadow: #9f8100 1px 1px 10px;
+    /* text-shadow: #9f8100 1px 1px 10px; */
+    background-color: #FFF;
+    border-radius: 20px;
+    padding: 5px;
 }
 
 @keyframes fade-in {
@@ -840,7 +843,7 @@ input[type="submit"]:hover {
 }
 
 
-@media  (min-width: 1200px) {
+@media  (max-width: 1200px) {
 #textoMaps{
     font-size: 2.3rem;
 }
