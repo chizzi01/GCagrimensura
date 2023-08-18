@@ -206,6 +206,33 @@ a {
     animation-delay: 2s;
 }
 
+
+.cards-container {
+    background-image: url(./img/cuadricula.jpg);
+    background-size: fill;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    /* flex-flow: row wrap; */
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cards-container h1 {
+    font-size: 1.5rem;
+    color: #fff;
+    animation: animacionText 1s ease-in-out;
+    animation-fill-mode: forwards;
+    cursor: default;
+    z-index: 2;
+    text-shadow: #131313 3px 2px 5px;
+    padding: 10px;
+}
+
+
 .servicios-container {
     background-image: url(./img/cuadricula.jpg);
     background-size: fill;
@@ -250,6 +277,16 @@ a {
     position: absolute;
     animation: easeIn 1s ease-in-out;
 }
+
+.backCards {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 50vh;
+    width: 20vw;
+    border-radius: 30px;
+    position: absolute;
+    animation: easeIn 1s ease-in-out;
+}
+
 
 #servicio1,
 #servicio2,
@@ -339,7 +376,7 @@ a {
     border-radius: 30px;
 }
 
-.owners-align{
+.owners-align {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -347,7 +384,7 @@ a {
     color: floralwhite;
 }
 
-.textoOwner{
+.textoOwner {
     width: 430px;
     font-size: 1.5rem;
     margin-top: 1rem;
@@ -357,7 +394,7 @@ a {
     margin-left: 40px;
 }
 
-.listOwner{
+.listOwner {
     width: 90%;
     font-size: 1.5rem;
     margin-top: 3rem;
@@ -365,8 +402,8 @@ a {
     text-align: left;
 }
 
-.listOwner li{
-    list-style: circle ;
+.listOwner li {
+    list-style: circle;
 }
 
 .ubicaciones-container {
@@ -405,7 +442,7 @@ a {
 
 
 .contacto-container {
-    background-image: -webkit-linear-gradient(top,rgba(39, 39, 39, 0.418), rgba(29, 29, 29, 0.932)),  url(./img/contacto.jpg);
+    background-image: -webkit-linear-gradient(top, rgba(39, 39, 39, 0.418), rgba(29, 29, 29, 0.932)), url(./img/contacto.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -611,9 +648,51 @@ input[type="submit"]:hover {
 
 .yellow {
     color: #FDD42E;
-    /* text-shadow: #9f8100 1px 1px 10px; */
-    background-color: #FFF;
-    padding: 3px;
+    text-shadow: #9f8100 1px 1px 5px;
+}
+
+#card-cpajn,
+#card-cpaProv,
+.card-arba {
+    height: 50vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #ffffffd3;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    filter: grayscale(100%);
+}
+
+#card-cpajn {
+    background-image: url(./img/cpa.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#card-cpaProv {
+    background-image: url(./img/logoprov.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-arba {
+    background-image: url(./img/logoARBA-bl.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#card-cpajn:hover,
+#card-cpaProv:hover,
+.card-arba:hover {
+    filter: grayscale(0%);
+    cursor: pointer;
+    border: #FDD42E 4px solid;
 }
 
 @keyframes fade-in {
@@ -713,7 +792,7 @@ input[type="submit"]:hover {
         position: relative;
     }
 
-    #navBar{
+    #navBar {
         padding-left: 0px;
     }
 
@@ -775,7 +854,7 @@ input[type="submit"]:hover {
         text-align: center;
     }
 
-    .ubicaciones-container{
+    .ubicaciones-container {
         justify-content: space-around;
     }
 
@@ -803,31 +882,69 @@ input[type="submit"]:hover {
         justify-content: space-evenly;
     }
 
-    .servicios-container{
+    .servicios-container {
         flex-direction: column;
         justify-content: space-evenly;
     }
 
-    #servicio1, #servicio2, #servicio3{
-        width: 90%;
-        margin: 10px;
+    .cards-container {
+        flex-direction: column;
+        justify-content: space-evenly;
     }
 
-    #backServicios, #backServicios2, #backServicios3{
+    #card-cpajn{
+        width: 320px;
+        height: 20vh;
+        margin-top: 100px;
+    }
+
+    #card-cpaProv {
+        width: 320px;
+        height: 20vh;
+        margin: 5px;
+    }
+
+    #card-cpajn h1,
+    #card-cpaProv h1,
+    .card-arba h1 {
+        font-size: 1rem;
+    }
+
+    .card-arba {
+        width: 320px;
+        height: 20vh;
+        margin: 5px;
+    }
+
+    .backCards {
         width: 100%;
         height: 100%;
     }
 
-    .textoOwner{
+    #servicio1,
+    #servicio2,
+    #servicio3 {
+        width: 90%;
+        margin: 10px;
+    }
+
+    #backServicios,
+    #backServicios2,
+    #backServicios3 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .textoOwner {
         width: 80%;
         font-size: 1rem;
         margin: 10px;
         padding-left: 77px;
     }
 
-    .listOwner{
-       font-size: 1rem;
-       margin-top: 10px;
+    .listOwner {
+        font-size: 1rem;
+        margin-top: 10px;
     }
 
 
@@ -835,27 +952,27 @@ input[type="submit"]:hover {
 }
 
 @media (max-width: 380px) {
-    #h1Inicio{
+    #h1Inicio {
         font-size: 2rem;
     }
 
 }
 
 
-@media  (min-width: 1200px) {
-#textoMaps{
-    font-size: 2.3rem;
+@media (min-width: 1200px) {
+    #textoMaps {
+        font-size: 2.3rem;
+    }
+
+    #tituloServ3,
+    #tituloServ2,
+    #tituloServ {
+        font-size: 2rem;
+    }
 }
 
-#tituloServ3,
-#tituloServ2,
-#tituloServ {
-    font-size: 2rem;
-}
-}
-
-@media  (max-height: 667px) {
-    #textoMaps{
+@media (max-height: 667px) {
+    #textoMaps {
         font-size: 1.2rem;
     }
 

@@ -13,6 +13,7 @@ $(window).scroll(function () {
     $('#nosotrosBTN').removeClass('grey');
     $('#serviciosBTN').removeClass('grey');
     $('#ubiBTN').removeClass('grey');
+    $('#linksBTN').removeClass('grey');
 
   } else {
     $('#navBar').removeClass('solid');
@@ -21,6 +22,7 @@ $(window).scroll(function () {
     $('#nosotrosBTN').addClass('grey');
     $('#serviciosBTN').addClass('grey');
     $('#ubiBTN').addClass('grey');
+    $('#linksBTN').addClass('grey');
 
   }
 });
@@ -160,6 +162,7 @@ servicio3.addEventListener("mouseout", function () {
 }
 );
 
+
 function observer(targetId, classAnimation) {
 
   const texto = document.getElementById(targetId);
@@ -258,6 +261,7 @@ toggleButton.addEventListener('click', () => {
     nosotrosBTN.classList.remove("grey");
     serviciosBTN.classList.remove("grey");
     ubiBTN.classList.remove("grey");
+    linksBTN.classList.remove("grey");
   }
 
 });
