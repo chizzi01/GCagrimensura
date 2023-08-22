@@ -62,7 +62,7 @@
 }
 
 #wppIcon {
-    background-image: url(./img/whatsapp.png);
+    background-image: url(./img/whatsapp.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -155,7 +155,7 @@ a {
 }
 
 .inicio-container {
-    background-image: -webkit-linear-gradient(top, rgba(228, 228, 228, 0.562), rgba(29, 29, 29, 0.897)), url(./img/inicio.jpg);
+    background-image: -webkit-linear-gradient(top, rgba(228, 228, 228, 0.562), rgba(29, 29, 29, 0.897)), url(./img/inicio.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -208,7 +208,7 @@ a {
 
 
 .cards-container {
-    background-image: url(./img/cuadricula.jpg);
+    background-image: url(./img/cuadricula.webp);
     background-size: fill;
     background-position: center;
     background-repeat: no-repeat;
@@ -234,7 +234,7 @@ a {
 
 
 .servicios-container {
-    background-image: url(./img/cuadricula.jpg);
+    background-image: url(./img/cuadricula.webp);
     background-size: fill;
     background-position: center;
     background-repeat: no-repeat;
@@ -298,7 +298,7 @@ a {
 }
 
 #servicio1 {
-    background-image: url(./img/servicio3.jpg);
+    background-image: url(./img/servicio3.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -310,7 +310,7 @@ a {
 }
 
 #servicio2 {
-    background-image: url(./img/servicio2.jpg);
+    background-image: url(./img/servicio2.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -322,7 +322,7 @@ a {
 }
 
 #servicio3 {
-    background-image: url(./img/topografia.jpg);
+    background-image: url(./img/topografia.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -361,7 +361,7 @@ a {
 #owner1 {
     width: 430px;
     height: 300px;
-    background-image: url(./img/perfilPrisma2.png);
+    background-image: url(./img/perfilprisma2.webp);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 30px;
@@ -370,7 +370,7 @@ a {
 #owner2 {
     width: 430px;
     height: 300px;
-    background-image: url(./img/perfilPrisma1.png);
+    background-image: url(./img/perfilprisma1.webp);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 30px;
@@ -407,7 +407,7 @@ a {
 }
 
 .ubicaciones-container {
-    background-image: url(./img/cuadricula.jpg);
+    background-image: url(./img/cuadricula.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -442,7 +442,7 @@ a {
 
 
 .contacto-container {
-    background-image: -webkit-linear-gradient(top, rgba(39, 39, 39, 0.418), rgba(29, 29, 29, 0.932)), url(./img/contacto.jpg);
+    background-image: -webkit-linear-gradient(top, rgba(39, 39, 39, 0.418), rgba(29, 29, 29, 0.932)), url(./img/contacto.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -562,7 +562,7 @@ input[type="submit"]:hover {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-image: url(./img/regla.png);
+    background-image: url(./img/regla.webp);
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -667,14 +667,14 @@ input[type="submit"]:hover {
 }
 
 #card-cpajn {
-    background-image: url(./img/cpa.png);
+    background-image: url(./img/cpa.webp);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 #card-cpaProv {
-    background-image: url(./img/logoprov.png);
+    background-image: url(./img/logoprov.webp);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
